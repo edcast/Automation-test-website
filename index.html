@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--suppress XmlInvalidId -->
+<html>
+
+<head>
+    <title>Test Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--JQuery Link-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<!--Bootstrap Link-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<!-- React CDN Link -->
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+
+<body>
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">page1</a>
+    <a href="#">Page2</a>
+    <a href="#">github</a>
+</div>
+<button class="openbtn btn btn-primary ml-4 mt-4" onclick="openNav()">SideMenu</button>
+
+<div class="container">
+    <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+               aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+               aria-selected="false">Profile</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+               aria-selected="false">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="page1.html">Page</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <!-- Form Start -->
+            <form class="mt-4" id="myForm">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" placeholder="Enter Your Name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" placeholder="Enter a vaild email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea type="text" class="form-control" placeholder="Address">
+            </textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="City">City</label>
+                        <input type="text" class="form-control" placeholder="City">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="state">State</label>
+                        <select class="form-control">
+                            <option selected>Choose...</option>
+                            <option>Madhya Pradesh</option>
+                            <option>Dehli</option>
+                            <option>Gujrat</option>
+                            <option>Rajsthan</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="zip">Zip</label>
+                        <input type="text" class="form-control" placeholder="Pin Code">
+                    </div>
+                    <div class="form-row col-md-4">
+                        <div class="form-group">
+                            <input type="checkbox" id="vehicle1" name="vehicle1">
+                            <label for="vehicle1"> I have a bike</label><br>
+                        </div>
+                        <div class="form-group ml-4">
+                            <input type="checkbox" id="vehicle2" name="vehicle2">
+                            <label for="vehicle2"> I have a car</label><br>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" onclick="clearForm()" class="btn btn-danger">Clear</button>
+            </form>
+            <!-- Form End -->
+        </div>
+
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        </div>
+        <!-- Profile Section -->
+        <script type="text/babel" src="app.js">
+        </script>
+
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        </div>
+        <!--Contact Section-->
+        <script type="text/babel" src="contact.js">
+        </script>
+    </div>
+</div>
+
+<script type="text/javascript">
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+  }
+  
+  function clearForm() {
+    document.getElementById("myForm").reset();
+  }
+
+</script>
+
+</body>
+
+</html>
