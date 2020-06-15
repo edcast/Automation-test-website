@@ -41,46 +41,46 @@
     <form class="mt-4" id="myForm">
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
+                <label for="name2">Name</label>
+                <input type="text" id="name2" class="form-control" placeholder="Enter Your Name">
             </div>
             <div class="form-group col-md-6">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter a valid email">
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="web-address">Web Address</label>
-                <input type="text" id="web-address" class="form-control" placeholder="Enter web address">
-            </div>
-            <div class="form-group col-md-6">
-                <label for="mobile">Mobile No.</label>
-                <input type="text" id="number" class="form-control" placeholder="Enter a mobile number">
+                <label for="email2">Email</label>
+                <input type="email" id="email2" class="form-control" placeholder="Enter a valid email">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="date">Date</label>
-                <input type="date" id="date" class="form-control">
+                <label for="web-address2">Web Address</label>
+                <input type="text" id="web-address2" class="form-control" placeholder="Enter web address">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="number2">Mobile No.</label>
+                <input type="text" id="number2" class="form-control" placeholder="Enter a mobile number">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="date2">Date</label>
+                <input type="date" id="date2" class="form-control">
             </div>
         </div>
 
         <div class="form-group">
-            <label for="address">Address</label>
+            <label for="address2">Address</label>
             <textarea type="text"
-                      id="address"
+                      id="address2"
                       class="form-control"
                       placeholder="Address"></textarea>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="City">City</label>
-                <input type="text" id="city" class="form-control" placeholder="City">
+                <label for="city2">City</label>
+                <input type="text" id="city2" class="form-control" placeholder="City">
             </div>
             <div class="form-group col-md-4">
-                <label for="state">State</label>
-                <select class="form-control">
+                <label for="state2">State</label>
+                <select class="form-control" id="state2">
                     <option>Madhya Pradesh</option>
                     <option>Dehli</option>
                     <option>Gujrat</option>
@@ -88,28 +88,28 @@
                 </select>
             </div>
             <div class="form-group col-md-2">
-                <label for="zip">Zip</label>
-                <input type="text" class="form-control" placeholder="Pin Code">
+                <label for="zip2">Zip</label>
+                <input type="text" id="zip2" class="form-control" placeholder="Pin Code">
             </div>
             <div class="form-row col-md-4">
                 <div class="form-group">
-                    <input type="checkbox" id="vehicle1" name="vehicle1">
-                    <label for="vehicle1"> I have a bike</label><br>
+                    <input type="checkbox" id="vehicle1a" name="vehicle1">
+                    <label for="vehicle1a"> I have a bike</label><br>
                 </div>
                 <div class="form-group ml-4">
-                    <input type="checkbox" id="vehicle2" name="vehicle2">
-                    <label for="vehicle2"> I have a car</label><br>
+                    <input type="checkbox" id="vehicle2a" name="vehicle2">
+                    <label for="vehicle2a"> I have a car</label><br>
                 </div>
             </div>
         </div>
-        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
-        <button type="button" onclick="clearForm()" class="btn btn-danger">Clear</button>
+        <button type="submit" id="submit2" class="btn btn-primary">Submit</button>
+        <button type="button" id="clear2" onclick="clearForm()" class="btn btn-danger">Clear</button>
     </form>
 </div>
 <script>
   function clearForm() {
     document.getElementById("myForm").reset();
-    document.getElementById('submit').disabled = true;
+    document.getElementById('submit2').disabled = true;
   }
 </script>
 <script>
@@ -117,48 +117,48 @@
 
     $('#myForm').submit(function (e) {
       e.preventDefault();
-      var name = $('#name').val();
-      var email = $('#email').val();
-      var webAddress = $('#web-address').val();
-      var mobileNumber = $('#number').val();
-      var address = $('#address').val();
-      var city = $('#city').val();
+      var name = $('#name2').val();
+      var email = $('#email2').val();
+      var webAddress = $('#web-address2').val();
+      var mobileNumber = $('#number2').val();
+      var address = $('#address2').val();
+      var city = $('#city2').val();
 
       $(".error").remove();
       if (name.length < 1) {
-        $('#name').after('<span class="error">This field is required</span>');
+        $('#name2').after('<span class="error">This field is required</span>');
       }
       if (email.length < 1) {
 
-        $('#email').after('<span class="error">This field is required</span>');
+        $('#email2').after('<span class="error">This field is required</span>');
       }
 
       if (webAddress.length < 1) {
-        $('#web-address').after('<span class="error">This field is required</span>');
+        $('#web-address2').after('<span class="error">This field is required</span>');
 
       } else {
         var regEx = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
         var validWebAddress = regEx.test(webAddress);
         if (!validWebAddress) {
-          $('#web-address').after('<span class="error">Enter a valid web-address</span>');
+          $('#web-address2').after('<span class="error">Enter a valid web-address</span>');
         }
       }
       if (mobileNumber.length < 1) {
 
-        $('#number').after('<span class="error">This field is required</span>');
+        $('#number2').after('<span class="error">This field is required</span>');
       } else {
         var regEx = /^[7-9][0-9]{9}$/;
         var validMobileNumber = regEx.test(mobileNumber);
-        $('#number').after('<span class="error">Enter a valid mobile number</span>');
+        $('#number2').after('<span class="error">Enter a valid mobile number</span>');
       }
 
       if (address.length < 1) {
 
-        $('#address').after('<span class="error">This field is required</span>');
+        $('#address2').after('<span class="error">This field is required</span>');
       }
       if (city.length < 1) {
 
-        $('#city').after('<span class="error">This field is required</span>');
+        $('#city2').after('<span class="error">This field is required</span>');
       }
     });
   });

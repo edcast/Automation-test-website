@@ -62,27 +62,27 @@
             <form class="mt-4" id="myForm">
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Your Name">
+                        <label for="name1">Name</label>
+                        <input type="text" id= "name1" class="form-control" placeholder="Enter Your Name">
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" placeholder="Enter a vaild email">
+                        <label for="email1">Email</label>
+                        <input type="email" id="email1" class="form-control" placeholder="Enter a vaild email">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="address">Address</label>
-                    <textarea type="text" class="form-control" placeholder="Address">
+                    <label for="add1">Address</label>
+                    <textarea type="text" id="add1" class="form-control" placeholder="Address">
             </textarea>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="City">City</label>
-                        <input type="text" class="form-control" placeholder="City">
+                        <label for="city1">City</label>
+                        <input type="text" id="city1" class="form-control" placeholder="City">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="state">State</label>
-                        <select class="form-control">
+                        <label for="state1">State</label>
+                        <select class="form-control" id="state1">
                             <option selected>Choose...</option>
                             <option>Madhya Pradesh</option>
                             <option>Dehli</option>
@@ -91,8 +91,8 @@
                         </select>
                     </div>
                     <div class="form-group col-md-2">
-                        <label for="zip">Zip</label>
-                        <input type="text" class="form-control" placeholder="Pin Code">
+                        <label for="zip1">Zip</label>
+                        <input type="text" id="zip1" class="form-control" placeholder="Pin Code">
                     </div>
                     <div class="form-row col-md-4">
                         <div class="form-group">
@@ -105,8 +105,9 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <button type="button" onclick="clearForm()" class="btn btn-danger">Clear</button>
+                <button id="elNotFoundTest" class="btn btn-primary">Test button</button>
+                <button type="submit" id="sub1" class="btn btn-primary">Submit</button>
+                <button type="button" id="clear1" onclick="clearForm()" class="btn btn-danger">Clear</button>
             </form>
             <!-- Form End -->
         </div>
